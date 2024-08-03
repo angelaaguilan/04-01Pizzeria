@@ -12,7 +12,7 @@ import carroCompra from '../assets/imgs/carroCompra.png';
 
 const NavBar = () => {
     const total = 25000;
-    const token = false;
+    const token = true;
     const precioTotal = Intl.NumberFormat("de-DE").format(total)
 
     return (
@@ -29,9 +29,9 @@ const NavBar = () => {
                         <Button variant="outline-light" className='text-white'>
                                 <Image src={PizzaTrozo} /> Home</Button>{' '}
                         <Button variant="outline-light" className='text-white'>
-                            <Image src={token ? {lockOpen} : { lock }} /> {token ? 'Profile' : 'Register'}</Button>
+                            <Image src={token ? lockOpen : lock } /> {token ? 'Profile' : 'Register'}</Button>
                         <Button variant="outline-light" className='text-white'>
-                            <Image src={token ? { lockOpen } : { lock }} /> {token ? 'Logout' : 'Login'}</Button>
+                            <Image src={token ? lockOpen : lock } /> {token ? 'Logout' : 'Login'}</Button>
                     </Nav>
                     <Form className="d-flex align-items-center">
                         <Button variant="outline-light" className='text-primary'><Image src={carroCompra}/> Total: ${precioTotal}</Button>
